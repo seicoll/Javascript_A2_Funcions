@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <title>Funció mesGran</title>
+        <meta charset="UTF-8">
+        
+        <script>
+            /*Escriu una funció anomenada mesGran(a,b) que té com entrada dos 
+            números i retorna el més gran.
+            Visualitza l’html en un navegador i obre la consola. Executa 
+            mesGran(‘a’,’b’) quin resultat et dóna? Això ho podries fer amb java?
+
+            Millora aquesta funció per tal que comprovi si els paràmetres a i b 
+            són numèrics (isNaN). Si no ho són genera un error per cada paràmetre
+            (try/catch/throw).
+            */  
+            
+            function mesGran(a, b) {
+                try {
+                    if (isNaN(a)) {        // if (typeof(a)!="number")
+                        throw "El primer paràmetre no és un nombre";
+                    }
+                    if (isNaN(b)) {
+                        throw "El segon paràmetre no és un nombre";
+                    }
+                    if (a > b) {
+                        return a;
+                    }
+                    else {
+                        return b;
+                    }
+                }
+                catch (err) {
+                   console.log(err);
+                }
+            
+            }
+            
+            //Demanem l'entrada de dades a l'usuari
+            var numero1 = parseInt(prompt("Introdueix el primer nombre"));
+            var numero2 = parseInt(prompt("Introdueix el segon nombre"));
+            
+            //Cridem la funció i mostrem el resultat
+            console.log("Els nombres introduits són: " +numero1+", " +numero2+ ". \nEl valor més gran és " + mesGran(numero1,numero2));
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

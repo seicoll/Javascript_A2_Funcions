@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <title>Funció unParametre</title>
+    <meta charset="UTF-8">
+
+    <script>
+        /*Crea una funció que tingui un paràmetre. Si el paràmetre és un 
+        número que faci el logaritme del seu valori el mostri a la consola.
+        Si el paràmetre és un string que el concateni a la frase “Tot és possible”
+        i escrigui aquest missatge a la consola tantes vegades com la longitud 
+        del mateix paràmetre.
+        I si no és un nombre ni un string que generi un error amb el missatge 
+        "Tipus de paràmetre desconegut per mi".
+        */
+
+        function unParametre(a) {
+            switch (typeof(a)) {
+                case "number":
+                    console.log(Math.log(a));
+                    break;
+                case "string":
+                    for (var i = 0; i < a.length; i++) {
+                        console.log("Tot és possible " + a);
+                    }
+                    break;
+                default:
+                    throw "Tipus de paràmetre desconegut per mi";
+            }
+        }
+
+        //Cridem la funció i mostrem el resultat
+        console.log("Crida a la funció unParametre(125)");
+        unParametre(125);
+        
+        console.log("Crida a la funció unParametre('avui')");
+        unParametre("avui");
+        
+        console.log("Crida a la funció unParametre([1, 1, 3, 4])");
+        unParametre([1, 1, 3, 4]);
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

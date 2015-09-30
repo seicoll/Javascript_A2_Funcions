@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <title>Funció unParametre</title>
+    <meta charset="UTF-8">
+
+    <script>
+        function sumar(a, b) {
+            if (a == 0)
+                return b;
+            if (b == 0)
+                return a;
+            return 1 + 1 + sumar(a - 1, b - 1);
+        }
+        
+        //Cridem la funció i mostrem el resultat
+        console.log("Crida a la funció sumar(10,7)");
+        console.log("Resultat " + sumar(10,7));
+
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

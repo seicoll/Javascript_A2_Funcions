@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <title>Funció menor</title>
+        <meta charset="UTF-8">
+        
+        <script>
+            /*Elaborar una funció a la qual li enviem tres enters i retorni el menor. 
+              Mostrar per pantalla el resultat retornat per la funció.*/
+            function menor(num1,num2,num3)
+            {
+                if ((num1 <= num2) && (num1 <= num3))
+                {
+                    return num1;
+                }
+                else if (num2 <= num3)
+                {
+                    return num2;
+                }
+                else
+                {
+                    return num3;
+                }
+                
+            }
+            
+            //Demanem l'entrada de dades a l'usuari
+            var numero1 = parseInt(prompt("Introdueix el primer nombre"));
+            var numero2 = parseInt(prompt("Introdueix el segon nombre"));
+            var numero3 = parseInt(prompt("Introdueix el tercer nombre"));
+            
+            //Cridem la funció i mostrem el resultat
+            alert("Els nombres introduits són: " +numero1+", " +numero2+ ", " + numero3+". \nEl menor és " + menor(numero1,numero2,numero3));
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
